@@ -11,7 +11,7 @@ def index():
     forecast = None
     print(address)
     if address:
-        forecast = get_forecast(address).decode()
+        forecast = get_forecast(address)
         print(forecast)
     return render_template('index.html', forecast=forecast)
 
