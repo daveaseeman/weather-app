@@ -1,6 +1,5 @@
 import os
-from flask import Flask, render_template
-import request
+from flask import Flask, render_template, request
 from weather import get_forecast
 
 app = Flask(__name__)
