@@ -1,6 +1,5 @@
 import os
-from flask import Flask
-import render_template
+from flask import Flask, render_template
 import request
 from weather import get_forecast
 
