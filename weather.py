@@ -23,7 +23,7 @@ def get_forecast(address):
     current_temperature = current_forecast.temperature
     forecast = "{} and {}°F at {}".format(
         current_summary.lower(),
-        current_temperature.lower(),
+        current_temperature,
         address
     )
     return forecast
