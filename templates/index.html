@@ -4,7 +4,7 @@
     <body>
         {% if forecast %}
         <div style="height:100vh;">
-            <h1 class="center-align">The forecast is {{ forecast }}!</h1><br />
+            <h1 class="center-align">{{ forecast }}</h1><br />
             <p class="center-align flow-text">
                 back to <a href="/">home</a><br />
                 <a href={{ url_for("about") }}>about</a>

@@ -24,7 +24,7 @@ def get_forecast(address):
     current_wind = current_forecast.windSpeed
     current_bearing = current_forecast.windBearing
     current_visibility = current_forecast.visibility
-    forecast = "Current condition is {} and {}°F, with winds {}mph {}NNE, visibility {} miles at {}".format(
+    forecast = "Currently {} and {}°F, with winds {}mph {}NNE, visibility {} miles at {}".format(
         current_condition.lower(),
         current_temperature,
         current_wind,
