@@ -3,30 +3,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <body>
         {% if forecast %}
-        <h1>The forecast is {{ forecast }}!</h1>
-        <p>
-            back to <a href="/">home</a>
-        </p>
-        {% else %}
-        <h1>Hello! What's your address?</h1>
-        <div class="row">
-            <form class="col s12" action="/">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="text" id="address_input" class="validate" name="address">
-                        <label for="address_input">Your Address:</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="submit" value="Submit" id="first_name" class="btn"/>
-                    </div>
-                </div>
-            </form>
+        <div style="height:100vh;" class="valign-wrapper">
+            <h1 class="center-align">The forecast is {{ forecast }}!</h1>
+            <p class="center-align flow-text">
+                back to <a href="/">home</a>
+            </p>
+            <a href={{ url_for("about") }}>about</a>
         </div>
-        {% endif %}
+        {% else %}
+        <div style="height:100vh;">
+            <h1>Hello! What's your address?</h1>
+            <div class="row">
+                <form class="col s12" action="/">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="text" id="address_input" class="validate" name="address">
+                            <label for="address_input">Your Address:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="submit" value="Submit" id="first_name" class="btn"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <a href={{ url_for("about") }}>about</a>
+        </div>
 
-        <a href={{ url_for("about") }}>about</a>
+        {% endif %}
         <!-- javascript -->
         <script src="https://use.fontawesome.com/8f6878caa0.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script></head>
