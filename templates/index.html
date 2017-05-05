@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <body>
         {% if forecast %}
-        <div style="height:100vh;" class="">
+        <div style="height:70vh;position:absolute;top:30%">
             <h1 class="center-align">The forecast is {{ forecast }}!</h1><br />
             <p class="center-align flow-text">
                 back to <a href="/">home</a><br />
@@ -11,7 +11,7 @@
             </p>
         </div>
         {% else %}
-        <div style="height:100vh;" class="valign-wrapper">
+        <div style="height:70vh;position:absolute;top:30%">
             <h1 class="center-align">Hello! What's your address?</h1><br />
             <div class="row">
                 <form class="col s12" action="/">
