@@ -3,12 +3,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <body>
         {% if forecast %}
-        <div style="height:100vh;" class="valign-wrapper">
+        <div style="height:100vh;" class="">
             <h1 class="center-align">The forecast is {{ forecast }}!</h1><br />
             <p class="center-align flow-text">
-                back to <a href="/">home</a>
+                back to <a href="/">home</a><br />
+                <a href={{ url_for("about") }}>about</a>
             </p>
-            <a href={{ url_for("about") }}>about</a>
         </div>
         {% else %}
         <div style="height:100vh;" class="valign-wrapper">
