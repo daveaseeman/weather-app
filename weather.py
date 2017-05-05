@@ -19,11 +19,17 @@ def get_forecast(address):
     lng = location.longitude
     forecast = forecastio.load_forecast(api_key, lat, lng)
     current_forecast = forecast.currently()
-    current_summary = current_forecast.summary
+    current_condition = current_forecast.icon
     current_temperature = current_forecast.temperature
-    forecast = "{} and {}°F at {}".format(
-        current_summary.lower(),
+    current_wind = current_forecast.windSpeed
+    current_bearing = current_forecast.windBearing
+    current_visibility = current_forecast.visibility
+    forecast = "Current condition is {} and {}°F, with winds {}mph {}NNE, visibility {} miles at {}".format(
+        current_condition.lower(),
         current_temperature,
+        current_wind,
+        current_bearing,
+        current_visibility,
         address
     )
     return forecast
