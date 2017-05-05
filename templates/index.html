@@ -4,30 +4,30 @@
     <body>
         {% if forecast %}
         <div style="height:100vh;" class="valign-wrapper">
-            <h1 class="center-align">The forecast is {{ forecast }}!</h1>
+            <h1 class="center-align">The forecast is {{ forecast }}!</h1><br />
             <p class="center-align flow-text">
                 back to <a href="/">home</a>
             </p>
             <a href={{ url_for("about") }}>about</a>
         </div>
         {% else %}
-        <div style="height:100vh;">
-            <h1>Hello! What's your address?</h1>
+        <div style="height:100vh; class="valign-wrapper"">
+            <h1 class="center-align">Hello! What's your address?</h1><br />
             <div class="row">
                 <form class="col s12" action="/">
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s6 offset-s3">
                             <input type="text" id="address_input" class="validate" name="address">
                             <label for="address_input">Your Address:</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s6 offset-s3">
                             <input type="submit" value="Submit" id="first_name" class="btn"/>
                         </div>
                     </div>
                 </form>
-            </div>
+            </div><br />
             <a href={{ url_for("about") }}>about</a>
         </div>
 
