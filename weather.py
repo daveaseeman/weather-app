@@ -18,10 +18,10 @@ def get_forecast(address):
     lat = location.latitude
     lng = location.longitude
     forecast = forecastio.load_forecast(api_key, lat, lng)
-    current_forecast = forecast.currently()
-    current_summary = current_forecast.summary
+    current_forecast = forecast.currently().lower()
+    current_summary = current_forecast.summary.lower()
     current_temperature = current_forecast.temperature
-    forecast = "{} and {}° at {}".format(
+    forecast = "{} and {}°F at {}".format(
         current_summary,
         current_temperature,
         address
